@@ -1,0 +1,51 @@
+{
+    "name": "swishdigital/faceted-navigation",
+    "description": "Provides faceted navigation of entries, using categories, which allows site users to narrow the list of entries they see by applying multiple filters (think Amazon or eBay left sidebar).",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "navigation",
+        "faceted navigation",
+        "categories",
+        "category",
+        "filter",
+        "filters",
+        "filtering",
+        "sidebar"
+    ],
+    "support": {
+        "docs": "https://github.com/helloswish/craft-faceted-navigation/blob/master/README.md",
+        "issues": "https://github.com/helloswish/craft-faceted-navigation/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Swish Digital",
+            "homepage": "https://helloswish.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "swishdigital\\facetednavigation\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Faceted Navigation",
+        "handle": "faceted-navigation",
+        "schemaVersion": "1.0.0",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/helloswish/craft-faceted-navigation/master/CHANGELOG.md",
+        "components": {
+            "navigation": "swishdigital\\facetednavigation\\services\\Navigation"
+        },
+        "class": "swishdigital\\facetednavigation\\FacetedNavigation"
+    }
+}
