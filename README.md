@@ -49,9 +49,9 @@ The plugin provides the following functionality:
 
 ## Screenshots
 
-![Example faceted navigation interface](resources/img/1.png)
-![List of categories with add and remove links](resources/img/2.png)
-![List of currently added categories with remove links](resources/img/3.png)
+![Example faceted navigation interface](resources/img/1.jpg)
+![List of categories with add and remove links](resources/img/2.jpg)
+![List of currently added categories with remove links](resources/img/3.jpg)
 
 ## Implementing Faceted Navigation
 
@@ -81,11 +81,11 @@ Add your categories to each group.
 
 Create category fields, one for each category group, and assign them to your inventory channel.
 
-![Category fields](resources/img/5.png)
+![Category fields](resources/img/5.jpg)
 
 Add your entries, and assign all the appropriate categories to them.
 
-![Categories assigned to an entry](resources/img/6.png)
+![Categories assigned to an entry](resources/img/6.jpg)
 
 ### Template Code
 
