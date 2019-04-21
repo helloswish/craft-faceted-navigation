@@ -2,6 +2,8 @@
 
 Provides faceted navigation of entries, using categories, which allows site users to narrow the list of entries they see by applying multiple facets (think Amazon or eBay left sidebar).
 
+Adapted for Craft 3.x with permission from its original author, the incomparable Iain Urquhart (http://iain.co.nz)
+
 ## Requirements
 
 This plugin requires Craft CMS 3.0.0-beta.23 or later.
@@ -73,7 +75,7 @@ Create a channel for your entries in the Craft Control Panel. For this example, 
 
 Create one or more category groups in the Craft Control Panel. For The Lotus Collection, I created 3 groups. The handles are `productType`, `productOrigin`, and `textileType`.
 
-![Category groups](resources/img/4.png)
+![Category groups](resources/img/4.gif)
 
 Add your categories to each group. 
 
