@@ -63,9 +63,9 @@ Add this route to your config/routes.php file:
 
 `'inventory/<path:.*?>' => ['template' => 'inventory/index']`
 
-*(this example assumes the faceted navigation will be located at https://domain.com/inventory and the template that is shown for that url is located in your Craft templates folder at inventory/index)*
+*(this example assumes the faceted navigation will be located at https://domain.com/inventory and the template that is shown for that url is located in the Craft templates folder at inventory/index)*
 
-This route will ensure that all requests that begin with *shop* and include any number of facets in the url will be directed to the correct template. All other implementation is done in your template code.
+This route will ensure that all requests that begin with *inventory* and include any number of facets in the url will be directed to the correct template. All other implementation is done in your template code.
 
 ### 2. Setup Channel, Categories, Fields, and Entries
 
