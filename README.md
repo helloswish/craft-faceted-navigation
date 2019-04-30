@@ -135,7 +135,7 @@ A few notes about the above code:
 
 **Output Currently Added Categories**
 
-You may want to show a list of currently applied facets. This is also a good place to build our `relatedTo` variable, which will become a parameter for the craft.entries query.
+You may want to show a list of currently applied facets. This is also a good place to build our `relationParam` variable, which will become a parameter for the craft.entries query.
 
 ```
 {% if navItems.activeCategories|length %}
