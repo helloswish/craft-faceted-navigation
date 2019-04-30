@@ -154,7 +154,7 @@ You may want to show a list of currently applied facets. This is also a good pla
 A few notes about the above code:
 
 - `{% if navItems.activeCategories|length %}` tests to see if there are currently added categories. If not, this entire block of code is skipped.
-- `{% set relationParam = relationParam|merge([{ targetElement:category }]) %}` adds another parameter to the `relationParam` array that we set anove in the basic tag set. For each added category, another parameter is added to that array.
+- `{% set relationParam = relationParam|merge([{ targetElement:category }]) %}` adds another parameter to the `relationParam` array that we set above in the basic tag set. For each added category, another parameter is added to that array.
 - We're again using `{{ url('inventory'~category.url.remove) }}` to create the remove link.
 
 **Run the Entries Query**
@@ -174,7 +174,7 @@ We've now collected all the parameters we need to feed into craft.entries:
 
 A note about the above code:
 
-- We're only merging the `relationParam` array into the `params` array (set at the top in the basic tag set) if there are any added categories. Otherwise the craft.entries query only gets the parameters set initially on that array, which, in this example, is the section handle  `inventory `.
+- We're only merging the `relationParam` array into the `params` array (set at the top in the basic tag set) if there are any added categories. Otherwise the craft.entries query only gets the parameters set initially on that array, which, in this example, is the section handle  `inventory`.
 
 **Full Code Example**
 
