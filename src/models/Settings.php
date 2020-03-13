@@ -39,7 +39,7 @@ class Settings extends Model
      *
      * @var string
      */
-    public $allowMultipleCategories;
+    public $allowMultipleFilters = false;
 
     // Public Methods
     // =========================================================================
