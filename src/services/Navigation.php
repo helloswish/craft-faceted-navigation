@@ -65,14 +65,12 @@ class Navigation extends Component
             {
                 $activeGroups[] = $key;
                 $filters = $this->activeFilters[$key];
-                $addVar = '/'.$key.'/'.implode('|', $filters);
+                $add .= '/'.$key.'/'.implode('|', $filters);
 
                 if(!in_array($slug, $this->activeFilters[$key]) && $key == $group)
                 {
-                    $addVar = '/'.$key.'/'.$slug;
+                    $add .= '|'.$slug;
                 }
-
-                $add .= $addVar;
 
                 foreach($filters as $k => $filter)
                 {
