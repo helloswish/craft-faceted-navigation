@@ -13,6 +13,7 @@
 
 namespace swishdigital\facetednavigation;
 
+use swishdigital\facetednavigation\models\Settings;
 use swishdigital\facetednavigation\services\Navigation as NavigationService;
 use swishdigital\facetednavigation\variables\FacetedNavigationVariable;
 
@@ -32,6 +33,8 @@ use yii\base\Event;
  * @since     1.0.0
  *
  * @property  NavigationService $navigation
+ * @property  Settings $settings
+ * @method    Settings getSettings()
  */
 class FacetedNavigation extends Plugin
 {
@@ -49,7 +52,7 @@ class FacetedNavigation extends Plugin
     /**
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public $schemaVersion = '1.1.1';
 
     // Public Methods
     // =========================================================================
@@ -95,4 +98,29 @@ class FacetedNavigation extends Plugin
     // Protected Methods
     // =========================================================================
 
+    /**
+     * Creates and returns the model used to store the plugin’s settings.
+     *
+     * @return \craft\base\Model|null
+     */
+    protected function createSettingsModel()
+    {
+        return new Settings();
+    }
+
+    /**
+     * Returns the rendered settings HTML, which will be inserted into the content
+     * block on the settings page.
+     *
+     * @return string The rendered settings HTML
+     */
+    protected function settingsHtml(): string
+    {
+        return Craft::$app->view->renderTemplate(
+            'faceted-navigation/settings',
+            [
+                'settings' => $this->getSettings()
+            ]
+        );
+    }
 }

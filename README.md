@@ -28,6 +28,10 @@ Locate Faceted Navigation in the plugin store and click install
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Faceted Navigation.
 
+### Settings
+
+Version 1.1.1 introduced a single setting in the Control Panel, which allows you to choose if users can select multiple filters per filter group. By default, users can _not_ select multiple filters per filter group.
+
 ## Faceted Navigation Overview
 
 This plugin provides the functionality necessary to implement faceted navigation on a site built with Craft CMS 3. To read more about faceted navigation, check out this [2010 A List Apart article](https://alistapart.com/article/design-patterns-faceted-navigation/).
@@ -63,9 +67,9 @@ Add this route to your config/routes.php file:
 
 `'inventory/<path:.*?>' => ['template' => 'inventory/index']`
 
-*(this example assumes the faceted navigation will be located at https://domain.com/inventory and the template that is shown for that url is located in the Craft templates folder at inventory/index)*
+*(this example assumes the faceted navigation will be located at https://domain.com/inventory and the template that is shown for that url is located in your Craft templates folder at inventory/index)*
 
-This route will ensure that all requests that begin with *inventory* and include any number of facets in the url will be directed to the correct template. All other implementation is done in your template code.
+This route will ensure that all requests that begin with *shop* and include any number of facets in the url will be directed to the correct template. All other implementation is done in your template code.
 
 ### 2. Setup Channel, Categories, Fields, and Entries
 
@@ -135,7 +139,7 @@ A few notes about the above code:
 
 **Output Currently Added Categories**
 
-You may want to show a list of currently applied facets. This is also a good place to build our `relationParam` variable, which will become a parameter for the craft.entries query.
+You may want to show a list of currently applied facets. This is also a good place to build our `relatedTo` variable, which will become a parameter for the craft.entries query.
 
 ```
 {% if navItems.activeCategories|length %}
@@ -154,7 +158,7 @@ You may want to show a list of currently applied facets. This is also a good pla
 A few notes about the above code:
 
 - `{% if navItems.activeCategories|length %}` tests to see if there are currently added categories. If not, this entire block of code is skipped.
-- `{% set relationParam = relationParam|merge([{ targetElement:category }]) %}` adds another parameter to the `relationParam` array that we set above in the basic tag set. For each added category, another parameter is added to that array.
+- `{% set relationParam = relationParam|merge([{ targetElement:category }]) %}` adds another parameter to the `relationParam` array that we set anove in the basic tag set. For each added category, another parameter is added to that array.
 - We're again using `{{ url('inventory'~category.url.remove) }}` to create the remove link.
 
 **Run the Entries Query**
@@ -174,7 +178,7 @@ We've now collected all the parameters we need to feed into craft.entries:
 
 A note about the above code:
 
-- We're only merging the `relationParam` array into the `params` array (set at the top in the basic tag set) if there are any added categories. Otherwise the craft.entries query only gets the parameters set initially on that array, which, in this example, is the section handle  `inventory`.
+- We're only merging the `relationParam` array into the `params` array (set at the top in the basic tag set) if there are any added categories. Otherwise the craft.entries query only gets the parameters set initially on that array, which, in this example, is the section handle  `inventory `.
 
 **Full Code Example**
 

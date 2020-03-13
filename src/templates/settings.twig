@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Faceted Navigation plugin for Craft CMS 3.x
+ *
+ * Faceted Navigation Settings.twig
+ *
+ * @author    Swish Digital
+ * @copyright Copyright (c) 2020 Swish Digital
+ * @link      https://swishdigital.co
+ * @package   FacetedNavigation
+ * @since     1.1.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("swishdigital\\facetednavigation\\assetbundles\\facetednavigation\\FacetedNavigationAsset") %}
+
+{{ forms.lightswitchField({
+    label: 'Allow Multiple Filters',
+    instructions: 'By default, users will only be able to select one filter at a time per filter group in your facets. Check this box to allow users to choose multiple filters per group on this site.',
+    id: 'allowMultipleCategories',
+    name: 'allowMultipleCategories',
+    on: settings['allowMultipleCategories']})
+}}

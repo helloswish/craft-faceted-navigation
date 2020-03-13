@@ -35,6 +35,9 @@ class Navigation extends Component
     var $categories = array();
     var $categoryHandles = array();
 
+    //get settings
+    var $settings;
+
     public function buildFacets($categoryHandles) {
 
         $this->categoryHandles = (is_array($categoryHandles)) ? $categoryHandles : array($categoryHandles);
@@ -65,11 +68,29 @@ class Navigation extends Component
             {
                 $activeGroups[] = $key;
                 $filters = $this->activeFilters[$key];
-                $add .= '/'.$key.'/'.implode('|', $filters);
+                
+                $settings = FacetedNavigation::$plugin->getSettings();
 
-                if(!in_array($slug, $this->activeFilters[$key]) && $key == $group)
-                {
-                    $add .= '|'.$slug;
+                if($settings->allowMultipleFilters !== false) {
+
+                    // allow multiple filters per cat group
+                    $add .= '/'.$key.'/'.implode('|', $filters);
+
+                    if(!in_array($slug, $this->activeFilters[$key]) && $key == $group)
+                    {
+                        $add .= '|'.$slug;
+                    }
+
+                } else {
+
+                    $addVar = '/'.$key.'/'.implode('|', $filters);
+
+                    if(!in_array($slug, $this->activeFilters[$key]) && $key == $group) {
+                        $addVar = '/'.$key.'/'.$slug;
+                    }
+
+                    $add .= $addVar;
+
                 }
 
                 foreach($filters as $k => $filter)
