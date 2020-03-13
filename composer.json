@@ -2,7 +2,7 @@
     "name": "swishdigital/faceted-navigation",
     "description": "Provides faceted navigation of entries, using categories, which allows site users to narrow the list of entries they see by applying multiple filters (think Amazon or eBay left sidebar).",
     "type": "craft-plugin",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "keywords": [
         "craft",
         "cms",
@@ -40,7 +40,7 @@
         "name": "Faceted Navigation",
         "handle": "faceted-navigation",
         "schemaVersion": "1.0.0",
-        "hasCpSettings": false,
+        "hasCpSettings": true,
         "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/helloswish/craft-faceted-navigation/master/CHANGELOG.md",
         "components": {
