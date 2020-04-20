@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2020 Swish Digital
  */
 
-namespace swishdigital\facetednavigation\assetbundles\FacetedNavigation;
+namespace swishdigital\facetednavigation\assetbundles\facetednavigation;
 
 use Craft;
 use craft\web\AssetBundle;
