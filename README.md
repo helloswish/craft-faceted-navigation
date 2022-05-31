@@ -1,4 +1,4 @@
-# Faceted Navigation plugin for Craft CMS 3.x
+# Faceted Navigation plugin for Craft CMS 3.x/4.x
 
 Provides faceted navigation of entries, using categories, which allows site users to narrow the list of entries they see by applying multiple facets (think Amazon or eBay left sidebar).
 
@@ -6,7 +6,7 @@ Adapted for Craft 3.x with permission from its original author, the incomparable
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.23 or later.
+This plugin requires Craft CMS 3.0.0-beta.23 or later, or Craft CMS 4.0.0-alpha.1 or later.
 
 ## Installation
 
@@ -69,7 +69,7 @@ Add this route to your config/routes.php file:
 
 *(this example assumes the faceted navigation will be located at https://domain.com/inventory and the template that is shown for that url is located in your Craft templates folder at inventory/index)*
 
-This route will ensure that all requests that begin with *shop* and include any number of facets in the url will be directed to the correct template. All other implementation is done in your template code.
+This route will ensure that all requests that begin with *inventory* and include any number of facets in the url will be directed to the correct template. All other implementation is done in your template code.
 
 ### 2. Setup Channel, Categories, Fields, and Entries
 
@@ -187,4 +187,4 @@ Here is the full code I used on The Lotus Collection site. It includes surroundi
 
 ------
 
-*Brought to you by [Swish Digital](https://helloswish.com)*
+*Brought to you by [Swish Digital](https://swishdigital.co)*

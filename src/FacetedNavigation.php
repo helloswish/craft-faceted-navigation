@@ -1,14 +1,11 @@
 <?php
 /**
- * Faceted Navigation plugin for Craft CMS 3.x
+ * Faceted Navigation plugin for Craft CMS 3.x/4.x
  *
- * Provides faceted navigation of entries, using categories, which allows site users to narrow the list of entries they see by applying multiple filters (think Amazon or eBay left sidebar).
+ * Faceted Navigation
  *
- * @link      https://helloswish.com
- * @copyright Copyright (c) 2019 Swish Digital
- *
- * Adapted for Craft 3.x with permission from its original
- * author, the incomparable Iain Urquhart (http://iain.co.nz)
+ * @link      https://swishdigital.co
+ * @copyright Copyright (c) 2019-2022 Swish Digital
  */
 
 namespace swishdigital\facetednavigation;
@@ -52,7 +49,7 @@ class FacetedNavigation extends Plugin
     /**
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '1.0.0';
 
     // Public Methods
     // =========================================================================
@@ -103,7 +100,7 @@ class FacetedNavigation extends Plugin
      *
      * @return \craft\base\Model|null
      */
-    protected function createSettingsModel()
+    protected function createSettingsModel(): ?\craft\base\Model
     {
         return new Settings();
     }
@@ -114,7 +111,7 @@ class FacetedNavigation extends Plugin
      *
      * @return string The rendered settings HTML
      */
-    protected function settingsHtml(): string
+    protected function settingsHtml(): ?string
     {
         return Craft::$app->view->renderTemplate(
             'faceted-navigation/settings',

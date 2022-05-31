@@ -1,11 +1,11 @@
 <?php
 /**
- * Faceted Navigation plugin for Craft CMS 3.x
+ * Faceted Navigation plugin for Craft CMS 3.x/4.x
  *
  * Faceted Navigation
  *
  * @link      https://swishdigital.co
- * @copyright Copyright (c) 2020 Swish Digital
+ * @copyright Copyright (c) 2019-2022 Swish Digital
  */
 
 namespace swishdigital\facetednavigation\models;
@@ -54,7 +54,7 @@ class Settings extends Model
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [];
     }
