@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.0 - 2021-05-31
+### Updated
+- Completed update for Craft 4 compatibility
+
+## 2.0.0-alpha - 2021-05-31
+### Updated
+- Pre-release update for Craft 4 compatibility
+
 ## 1.1.4 - 2020-04-20
 ### Fixed
 - Updated namespace to comply with psr-4 autoloading standard
