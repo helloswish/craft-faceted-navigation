@@ -1,4 +1,4 @@
-# Faceted Navigation plugin for Craft CMS 3.x/4.x
+# Faceted Navigation plugin for Craft CMS 3.x/4.x/5.x
 
 Provides faceted navigation of entries, using categories, which allows site users to narrow the list of entries they see by applying multiple facets (think Amazon or eBay left sidebar).
 
@@ -6,7 +6,7 @@ Adapted with permission from its original author, the incomparable Iain Urquhart
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.23 or later, or Craft CMS 4.0.0-alpha.1 or later.
+This plugin requires Craft CMS 3.0.0-beta.23 or later, Craft CMS 4.0.0-alpha.1 or later, or Craft CMS 5.x or later.
 
 ## Installation
 
